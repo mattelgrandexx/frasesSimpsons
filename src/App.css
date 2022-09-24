@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+.centrar{
+  text-align: center;
+}
+.tamañoImagen{
+  width: 60%;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.anchoDiv{
+  width: 50%;
+}
+.flexible{
+  display: flex;
+}
+.borde{
+  border: 5px solid red;
+  border-radius: 50px;
+}
+.borde1{
+  border: 5px solid orange;
+  border-radius: 50px;
+}
+.ancho{
+  width: 50%;
+}
+.fondo{
+  background: #91ABE5;
+}
+.fondoBlanco{
+  background: white;
+  margin: 20px;
+}
+.boton{
+  background: #FFC105;
+  border: none;
+  height: 40px;
+}
