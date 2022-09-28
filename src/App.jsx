@@ -14,11 +14,16 @@ function App() {
     
 },[])
 
-const consultarApi=()=>{
+const consultarApi= async ()=>{
 try {
+  // aqui hago la solicitud
   // el metodo fetch sirve para hacer peticiones a APIs
-  const respuesta = fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
+  const respuesta = await fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
   console.log(respuesta);
+  const dato = await respuesta.json();
+  console.log(dato[0])
+  // guardar la frase del personaje en el state
+  setPersonaje(dato[0]);
 } catch (error) {
   console.log(error)
   // mostrar un mensaje de error al usuario
@@ -28,7 +33,7 @@ try {
     <Container className='borde1 ancho fondo'>
 
    <LogoSimpsons></LogoSimpsons>
-   <CardHomero></CardHomero>
+   <CardHomero propPersonaje={personaje}></CardHomero>
     
     </Container>
   )
