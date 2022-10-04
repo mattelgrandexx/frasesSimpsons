@@ -1,14 +1,14 @@
-import React from 'react';
 import theSimpson from "./img/theSimpson.png"
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
+import consultarApi from "./App"
 
-const LogoSimpsons = () => {
+const LogoSimpsons = ({consultarApi}) => {
     return (
         <Container className='centrar'>
         <div className='container'>
               <img className='tamañoImagen' src={theSimpson} alt="Logo de los Simpsons" />
             </div>
-            <button className='boton'>Obtener Frase</button>
+            <Button type="button" variant="warning" onClick={consultarApi}>Obtener Frase</Button>
             
            </Container>
     );

@@ -1,20 +1,20 @@
-import React from 'react';
 import {Container} from 'react-bootstrap';
-import homero from "./img/homero.png"
 
-const Homero = () => {
+const Homero = ({propPersonaje}) => {
     return (
+        <>
         <Container className='fondoBlanco'>
-            <div className='flexible borde'>
+            <div className='flexible'>
                 <div>
-                    <img className='tamañoImagen' src={homero} alt="Imagen de homero" />
+                    <img className='tamañoImagen' src={propPersonaje.image} alt={propPersonaje.character} />
                 </div>
                 <div className='anchoDiv'>
-                    <h3>Homero Simpson</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit nihil sint atque natus corporis fugit veniam labore incidunt perspiciatis assumenda quo deleniti, non repudiandae nam corrupti beatae tenetur commodi reiciendis</p>
+                    <h3>{propPersonaje.character}</h3>
+                    <p>{propPersonaje.quote}</p>
               </div>
                </div>
             </Container>
+        </>
     );
 };
 
